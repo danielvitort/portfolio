@@ -1,28 +1,41 @@
+"use client"
+
 import { Container } from "@/components/Container"
 import { IconAward, IconEducation, IconLogoGithub } from "@/components/Icon"
+import { motion } from "framer-motion"
 
 const About = () => {
     return (
         <section id="about" className="bg-secondary text-primary xl:h-lvh flex">
             <Container>
                 <div className="flex flex-col justify-center">
-                    <h3 className="text-center lg:text-6xl text-4xl font-bold lg:py-16 py-8">Sobre</h3>
+                    <h3 className="text-center lg:text-6xl text-4xl font-bold  py-14">Sobre</h3>
                     <div className="flex flex-col items-center">
-                        <div className="flex justify-center flex-col md:flex-row lg:gap-20 gap-8 pb-10">
-                            <div className="w-80 border-4 border-primary  rounded-md flex flex-col items-center py-10">
+                        <div className="flex justify-center flex-col md:flex-row lg:gap-10 gap-8 pb-10">
+                            <motion.div
+                                className="w-80 border-4 border-primary  rounded-md flex flex-col items-center py-10"
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -100 }}
+                                transition={{ duration: 0.5 }}
+                            >
                                 <div className="pb-2"><IconAward className="text-primary" width='2em' height='2em' /></div>
                                 <div className="text-xl font-bold pb-2">Experiência</div>
                                 <div>+ 2 anos</div>
-                                <div>Desenvolvedor Web</div>
-                            </div>
-                            <div className="">
-                                <div className="w-80 border-4 border-primary  rounded-md flex flex-col items-center py-10">
-                                    <div className="pb-2"><IconEducation className="text-primary" width='2em' height='2em' /></div>
-                                    <div className="text-xl font-bold pb-2">Educação</div>
-                                    <div>Analise e Desenvolvimento de Sistemas</div>
-                                    <div>Curso B7Web</div>
-                                </div>
-                            </div>
+                                <div>Desenvolvendo Projetos</div>
+                            </motion.div>
+                            <motion.div
+                                className="w-80 border-4 border-primary  rounded-md flex flex-col items-center py-10"
+                                initial={{ opacity: 0, x: 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -100 }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                <div className="pb-2"><IconEducation className="text-primary" width='2em' height='2em' /></div>
+                                <div className="text-xl font-bold pb-2">Formação</div>
+                                <div>Analise e Desenvolvimento de Sistemas</div>
+                                <div>Curso B7Web</div>
+                            </motion.div>
                         </div>
                         <div className="flex justify-center sm:text-lg">
                             <div className="text-center w-3/4">

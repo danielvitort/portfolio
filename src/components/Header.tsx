@@ -1,15 +1,21 @@
+"use client"
+
 import Logo from "@/assets/images/dvt-logo.png"
 import Image from "next/image"
 import { Container } from "./Container"
 import Link from "next/link"
+import { IconClose, IconMenu } from "./Icon"
+import { useState } from "react"
 
 export const Header = () => {
+    const [MenuOpen, setMenuOpen] = useState(false)
+
     return (
         <nav className="fixed w-full z-10 flex items-center h-14 bg-header">
 
             <Container>
                 <div className=" flex items-center justify-between">
-                    <div className="w-20 flex justify-center">
+                    <div className="w-20 flex justify-center xl:mx-0 mx-3 hover:scale-125 transition-all">
                         <Link href="#hero" >
                             <Image
                                 src={Logo}
@@ -18,7 +24,7 @@ export const Header = () => {
                         </Link>
                     </div>
                     <div >
-                        <ul className="hidden sm:flex items-center lg:gap-16 sm:gap-10">
+                        <ul className="hidden sm:flex items-center text-base lg:gap-16 sm:gap-10">
                             <li>
                                 <Link href="#about" className="text-secondary font-bold hover:text-white relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-sky-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-400 after:origin-center">Sobre</Link>
                             </li>
@@ -32,6 +38,34 @@ export const Header = () => {
                                 <Link href="#contacts" className="text-secondary font-bold  hover:text-white relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-sky-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-400 after:origin-center">Contatos</Link>
                             </li>
                         </ul>
+                        <div
+                            className="sm:hidden cursor-pointer"
+
+                            onClick={() => setMenuOpen(!MenuOpen)}
+                        >
+                            {MenuOpen ? (
+                                <IconClose
+                                    width='2em'
+                                    height='2em'
+                                    className="text-secondary"
+                                />)
+                                : (
+                                    <IconMenu
+                                        width='2em'
+                                        height='2em'
+                                        className="text-secondary"
+                                    />
+                                )}
+                            <div
+                                className={`absolute xl:hidden top-12 left-0 w-full bg-header flex flex-col items-center gap-4 font-semibold text-lg transform transition-transform ${MenuOpen ? "opacity-100" : "opacity-0"}`}
+                                style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
+                            >
+                                <li className="text-secondary list-none w-full text-center p-4 hover:bg-sky-500 transition-all"><Link href="#about">Sobre</Link></li>
+                                <li className="text-secondary list-none w-full text-center p-4 hover:bg-sky-500 transition-all"><Link href="#skill">Habilidades</Link></li>
+                                <li className="text-secondary list-none w-full text-center p-4 hover:bg-sky-500 transition-all"><Link href="#projects">Projetos</Link></li>
+                                <li className="text-secondary list-none w-full text-center p-4 hover:bg-sky-500 transition-all"><Link href="#contacts">Contatos</Link></li>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </Container>

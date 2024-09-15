@@ -13,7 +13,7 @@ const Projects = () => {
         <section id="projects" className="bg-secondary text-primary flex pb-14">
             <Container>
                 <div>
-                    <h3 className="text-center lg:text-6xl text-4xl font-bold lg:py-16 py-8">Projetos</h3>
+                    <h3 className="text-center lg:text-6xl text-4xl font-bold py-14">Projetos</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className=" border-2 border-slate-400 rounded-md flex flex-col items-center p-5  gap-4 hover:bg-blue-100 hover:border-primary">
                             <div className="text-2xl font-bold">Amigo Secreto/Oculto</div>

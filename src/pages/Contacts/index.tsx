@@ -6,7 +6,7 @@ const Contacts = () => {
     return (
         <section id="contacts" className="bg-primary text-secondary">
             <Container>
-                <h3 className="text-center lg:text-6xl text-4xl font-bold lg:py-16 py-8">Contatos</h3>
+                <h3 className="text-center lg:text-6xl text-4xl font-bold py-14">Contatos</h3>
                 <div className="sm:text-xl text-xs pb-28 sm:pl-10 text-slate-300">
                     <div className=" flex items-center">
                         <IconEmail width='2em' height='2em' />
