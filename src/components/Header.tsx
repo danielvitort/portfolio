@@ -18,7 +18,7 @@ export const Header = () => {
                         </Link>
                     </div>
                     <div >
-                        <ul className="flex items-center sm:gap-16">
+                        <ul className="hidden sm:flex items-center lg:gap-16 sm:gap-10">
                             <li>
                                 <Link href="#about" className="text-secondary font-bold hover:text-white relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-sky-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-400 after:origin-center">Sobre</Link>
                             </li>

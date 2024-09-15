@@ -3,7 +3,7 @@ import { IconAward, IconEducation, IconLogoGithub } from "@/components/Icon"
 
 const About = () => {
     return (
-        <section id="about" className="bg-secondary text-primary lg:h-lvh flex">
+        <section id="about" className="bg-secondary text-primary xl:h-lvh flex">
             <Container>
                 <div className="flex flex-col justify-center">
                     <h3 className="text-center lg:text-6xl text-4xl font-bold lg:py-16 py-8">Sobre</h3>
