@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 const About = () => {
     return (
-        <section id="about" className="bg-secondary text-primary xl:h-lvh flex">
+        <section id="about" className="bg-secondary text-primary  flex">
             <Container>
                 <div className="flex flex-col justify-center">
                     <h3 className="text-center lg:text-6xl text-4xl font-bold  py-14">Sobre</h3>
@@ -14,10 +14,10 @@ const About = () => {
                         <div className="flex justify-center flex-col md:flex-row lg:gap-10 gap-8 pb-10">
                             <motion.div
                                 className="w-80 border-4 border-primary  rounded-md flex flex-col items-center py-10"
-                                initial={{ opacity: 0, x: -100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -100 }}
-                                transition={{ duration: 0.5 }}
+                                initial={{ opacity: 0}}
+                                whileInView={{ opacity: 1}}
+                                exit={{ opacity: 0}}
+                                transition={{ duration: 0.5, delay: 0.2 }}
                             >
                                 <div className="pb-2"><IconAward className="text-primary" width='2em' height='2em' /></div>
                                 <div className="text-xl font-bold pb-2">Experiência</div>
@@ -26,10 +26,10 @@ const About = () => {
                             </motion.div>
                             <motion.div
                                 className="w-80 border-4 border-primary  rounded-md flex flex-col items-center py-10"
-                                initial={{ opacity: 0, x: 100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -100 }}
-                                transition={{ duration: 0.8 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1}}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.8, delay:0.4 }}
                             >
                                 <div className="pb-2"><IconEducation className="text-primary" width='2em' height='2em' /></div>
                                 <div className="text-xl font-bold pb-2">Formação</div>

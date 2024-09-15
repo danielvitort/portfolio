@@ -13,11 +13,11 @@ const Hero = () => {
 
 
     return (
-        <section id="hero" className="bg-primary text-white h-lvh flex items-center">
+        <section id="hero" className="bg-primary text-white h-lvh z-0 flex items-center">
             <Container>
                 <div className="grid lg:grid-cols-2 grid-cols-1">
                     <div className="relative">
-                        <div className="absolute lg:w-[130%] w-[120%] -top-1/3 right-0">
+                        <div className="absolute w-[120%] -top-1/3 right-0">
                             <AnimatedBackground />
                         </div>
                         <div className="relative flex items-center justify-center">
