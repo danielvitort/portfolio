@@ -27,7 +27,7 @@ const Projects = () => {
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                         >
-                            <div className="text-2xl font-bold ">Venda de Comida Japonesa via WhatsApp </div>
+                            <div className="text-2xl font-bold text-center">Plataforma de Venda de Comida Japonesa via WhatsApp </div>
                             <Image className="lg:h-80" src={LojaWpp} alt="Projeto amigo secreto" width={450} quality={100} />
                             <div className="flex flex-col">
                                 <div >Uma plataforma intuitiva e responsiva para a venda de comida japonesa, proporcionando uma experiência de compra fluida e eficiente.
@@ -44,8 +44,7 @@ const Projects = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 50 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
-                            >
-                                <IconLogoGithub width="2.5em" height="2.5em" />
+                            >                                <IconLogoGithub width="2.5em" height="2.5em" />
                                 <span>Repositório:</span>
                                 <Link
                                     href="https://github.com/danielvitort/Loja-WPP"

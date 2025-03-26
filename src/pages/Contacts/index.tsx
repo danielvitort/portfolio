@@ -26,27 +26,15 @@ const Contacts = () => {
                         </Link>
                     </div>
                     <div className=" flex items-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 100 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                        >
-                            <IconBxlLinkedinSquare width='2em' height='2em' />
-                        </motion.div>                        <span className="sm:px-2 px-1">LinkedIn:</span>
+                        <IconBxlLinkedinSquare width='2em' height='2em' />
+                        <span className="sm:px-2 px-1">LinkedIn:</span>
                         <Link href="https://www.linkedin.com/in/danielvitortrindade" className="hover:text-white hover:border-b-2" target="_blank">
                             https://www.linkedin.com/in/danielvitortrindade
                         </Link>
                     </div>
                     <div className="flex items-center">
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 100 }}
-                            transition={{ duration: 0.5, delay: 0.6 }}
-                        >
-                            <IconLogoGithub width='2em' height='2em' />
-                        </motion.div>                        <span className="sm:px-2 px-1">GitHub:</span>
+                        <IconLogoGithub width='2em' height='2em' />
+                        <span className="sm:px-2 px-1">GitHub:</span>
                         <Link href="https://github.com/danielvitort" className="hover:text-white hover:border-b-2" target="_blank">
                             https://github.com/danielvitort
                         </Link>
